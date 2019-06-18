@@ -9,4 +9,5 @@ const ip = "192.88.0.12";
 web = "httpx://victorroblescursos.es";
 // ip = "12.342.32.212";
 
+//una constante su valor no puede ser modificado.
 console.log(web, ip);
