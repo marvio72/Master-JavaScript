@@ -21,3 +21,9 @@ console.log(Number(numero_falso)+7);
 
 //para convertir un numero a una cadena de texto
 console.log(String(numero_entero)+4); //El resultado se 444
+
+//typeof es una funcion que nos informa que tipo de variable es
+console.log(typeof numero_entero);
+console.log(typeof cadena_texto);
+console.log(typeof verdadero_falso);
+console.log(typeof numero_falso);
