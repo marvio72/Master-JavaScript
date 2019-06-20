@@ -1,15 +1,17 @@
 'use strict';
 
-//Funciones
-//Es una agrupación reutilizable de un conjunto de instrucciones
+//parametros
 
-//Defino la función
-function calculadora(){
-    //Conjunto de instrucciones a ejecutar
-    return "Hola soy la calculadora";
+
+function calculadora(numero1,numero2){
+    console.log("Suma:           "+(numero1+numero2));
+    console.log("Resta:          "+(numero1-numero2));
+    console.log("Multiplicación: "+(numero1*numero2));
+    console.log("División:       "+(numero1/numero2));
+    console.log('**********************************');
 }
-//Invocar o llamar a la función
-calculadora();
-//otra manera de invocarla es la siguiente
-var resultado = calculadora();
-console.log(resultado);
+
+for (let i = 0; i <= 10; i++) {
+    console.log(i);
+    calculadora(i,10);
+}
