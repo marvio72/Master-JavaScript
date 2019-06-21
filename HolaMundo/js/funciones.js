@@ -29,5 +29,5 @@ function calculadora(numero1,numero2,mostrar = false){
 }
 
 for (let i = 0; i <= 10; i++) {
-    calculadora(i,10,false); //Aqui agregamos el parametro opcional
+    calculadora(i,10,true); //Aqui agregamos el parametro opcional
 }
