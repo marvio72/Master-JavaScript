@@ -4,7 +4,7 @@
 //Es una funcion que no tiene nombre
 
 var pelicula = function(nombre){
-    return "La pelicuas es: "+nombre; 
+    return "La película es: "+nombre; 
 };
 
 //Otro ejemplo
@@ -25,7 +25,7 @@ function(dato){
     console.log("La suma por dos es: " + dato*2);
 });
 
-//funcion flecha
+//función flecha
 sumame(23, 54, dato => {
         console.log("La suma es:" + dato);
     },
