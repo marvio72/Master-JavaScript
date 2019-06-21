@@ -24,3 +24,11 @@ sumame(7,6,function(dato){
 function(dato){
     console.log("La suma por dos es: " + dato*2);
 });
+
+//funcion flecha
+sumame(23, 54, dato => {
+        console.log("La suma es:" + dato);
+    },
+    dato => {
+        console.log("La suma por dos es: " + dato * 2);
+    });
