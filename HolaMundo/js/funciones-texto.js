@@ -2,41 +2,21 @@
 
 //Transformación de Textos
 var numero = 444;
-var texto1 = "Bienvenido al curso de JavaScript de curso Victor Robles";
+var texto1 = "     Bienvenido al curso de JavaScript de Victor Robles    ";
 var texto2 = "es muy buen curso";
 
-//Nos indica en que numero de caracter se encuentra la palabra que estamos buscando
-//podemos usar tambien search en lugar de indexOf
-var busqueda = texto1.indexOf('curso');
+//Remplaza un texto por otro
+var busqueda = texto1.replace('JavaScript', 'Symfony');
 console.log(busqueda);
 
-//Nos indica en que numero de caracter se encuentra la ultima coincidencia de la busqueda
-var busqueda = texto1.lastIndexOf('curso');
+//Elimina lo anterior al caracter que le indiquemos y si le damos un segundo parametro es como hacer un rango
+var busqueda = texto1.slice(14,22);
 console.log(busqueda);
 
-//Nos entrega la información en un array
-var busqueda = texto1.match('curso');
+//Con respecto al caracter que le indiquemos, nos crea un arreglo separando cada palabra
+var busqueda = texto1.split(' ');
 console.log(busqueda);
 
-var busqueda = texto1.match(/curso/g);
-console.log(busqueda);
-
-//Extrae los caracteres que le indiquemos
-var busqueda = texto1.substr(23,10);
-console.log(busqueda);
-
-//Nos entrega la letra que se encuentra en la posicion que le indiquemos
-var busqueda = texto1.charAt(44);
-console.log(busqueda);
-
-//Nos indica true o false si los caracteres que indicamos estan al inicio de la cadena de texto
-var busqueda = texto1.startsWith('Bienvenido');
-console.log(busqueda);
-
-//Al final
-var busqueda = texto1.endsWith('Robles');
-console.log(busqueda);
-
-//En cualquier parte
-var busqueda = texto1.includes('curso');
+//Limpia los espacios vacios por delante y por detras de la cadena de caracteres
+var busqueda = texto1.trim();
 console.log(busqueda);
