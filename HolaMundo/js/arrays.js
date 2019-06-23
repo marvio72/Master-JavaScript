@@ -10,25 +10,6 @@ console.log('nombres: ', nombres);
 //como objeto
 var lenguajes = new Array("PHP","JS","Go","Java","C#","C","Pascal");
 
- console.log(nombres);
- console.log(lenguajes);console.log();
-
- //Sacar un valor especifico del array
- //Los indices inician desde el cero
- console.log(nombres[2]);
-
- //Ver la longitud de un array
- console.log(nombre.length);
- console.log(nombres.length);
- console.log(lenguajes.length);console.log();
-
- //Capturar el numero de elemento que deseamos mediante un prompt
-//  var elemento = parseInt(prompt("¿Qué elemento del array quieres?",0));
-//  if (elemento >= nombres.length) {
-//     alert("No existe ese indice en el arreglo");  
-//  }else{
-//     alert(nombres[elemento]);
-//  }
 
  //
  // ─── DESPLEGAR EN LA PAGINA TODOS LOS COMPONENTES DE UN ARREGLO ─────────────────
@@ -69,9 +50,29 @@ var lenguajes = new Array("PHP","JS","Go","Java","C#","C","Pascal");
 
  elementos += `
     <h2>Bucle hecho con Foreach</h2>
-    <ul style="list-style:none">
+    <ul style="list-style:none;">
         ${elementos_foreach(nombres)}
     </ul>
  `;
 
-  document.getElementById('resultado').innerHTML = elementos;
+/**************************
+ * BUCLE HECHO CON FOR IN *
+ **************************/
+
+function elementos_forin(arreglos){
+let resultado = "";
+for(let arreglo in arreglos){
+    resultado += "<li>"+arreglo+" - "+arreglos[arreglo]+"</li>";
+}
+return resultado;
+} 
+
+elementos += `
+    <h2>Bucle hecho con For in</h2>
+    <ul style="list-style:none;"
+        ${elementos_forin(lenguajes)}
+    </ul>    
+`;
+
+
+document.getElementById('resultado').innerHTML = elementos;
