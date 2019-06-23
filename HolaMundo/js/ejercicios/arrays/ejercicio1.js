@@ -38,15 +38,30 @@ function numeros(arreglos){
     }
     return resultado;
 }
-
-var valores = `
-    <h3>Valores de el Array</h3>
+var resultado = '';
+function muestra(array,comentario=''){
+    var valores = `
+    <h3>Valores de el Array ${comentario}</h3>
     <ul style="list-style:none;">
-        ${numeros(arreglo)}
+        ${numeros(array)}
     </ul>
-`;
+    `;
+    resultado += valores;
+    return resultado;
+}
+function comenta_arreglo(array, comentario = "",posicion = "",indice="") {
+    let valores = `
+    <h3>${comentario}</h3>
+    <p><strong>${array}</strong></p>
+    <h3>${posicion}</h3>
+    <p><strong>${indice}</strong></p>
+    `;
+    resultado += valores;
+    return resultado;
+}
 
-document.getElementById('resultado').innerHTML = valores;
+muestra(arreglo);
+
 
 // forin para consolog
 function numeros_consola(arreglos){
@@ -63,44 +78,23 @@ console.log(numeros_consola(arreglo));
  * 3. ORDENARLO Y MOSTRARLO *
  ****************************/
 //Para ordenar los numeros se necesita realizarlo de esta manera.
-var ordenar = arreglo.sort(function(a,b){
-    return a - b;
-});
+var ordenar = arreglo.sort(function(a,b){return a - b;});
 
-valores += `
-    <h3>Valores de el Array Ordenados</h3>
-    <ul style="list-style:none;">
-        ${numeros(ordenar)}
-    </ul>
-`;
-
-document.getElementById('resultado').innerHTML = valores;
+document.getElementById('resultado').innerHTML = muestra(ordenar, "Ordenado");
 console.log(numeros_consola(ordenar));
 
 /************************************
  * 4. INVERTIR SU ORDEN Y MOSTRARLO *
  ************************************/
 var inverso = ordenar.reverse();
-valores += `
-    <h3>Valores de el Array Ordenados Inversamente</h3>
-    <ul style="list-style:none;">
-        ${numeros(inverso)}
-    </ul>
-`;
-
-document.getElementById('resultado').innerHTML = valores;
+document.getElementById('resultado').innerHTML = muestra(inverso, "Inverso");
 console.log(numeros_consola(inverso));
 
 /***********************************************
  * 5. MOSTRAR CUANTOS ELEMENTOS TIENE EL ARRAY *
  ***********************************************/
 var elementos = arreglo.length;
-
-valores += `
-    <h3>Mostrar cuantos elementos tiene el array</h3>
-    <p>Existen <strong>${elementos}</strong> elementos en el arreglo</p>
-`;
-document.getElementById('resultado').innerHTML = valores;
+document.getElementById('resultado').innerHTML = comenta_arreglo(elementos, "Registros en el arreglo");
 console.log("Existen "+elementos+" elementos en el arreglo");
 
 // 6. busqueda de un valor introducido por el usuario, que nos diga si lo encuentra y su indice
@@ -111,18 +105,11 @@ do {
 
 var busqueda = arreglo.find(array => array == busca);
 if (busqueda == undefined) {
-    valores += `
-    <h3>Busqueda del número</h3>
-    <p>El número <strong>${busca}</strong> no existe!!</p>
-    `;
-    document.getElementById('resultado').innerHTML = valores;
+    document.getElementById('resultado').innerHTML = comenta_arreglo(busca, "No encontrado!!!");
     console.log("El numero "+busca+" no existe!!");
 }else{
-    valores += `
-    <h3>Busqueda del número</h3>
-    <p>El número <strong>${busca}</strong> SI existe en el arreglo!!!</p>
-    `;
-    document.getElementById('resultado').innerHTML = valores;
-    console.log("El numero " + busca + " si existe en el arreglo!!");
+    var indice = arreglo.findIndex(array => array == busca);
+    document.getElementById('resultado').innerHTML = comenta_arreglo(busca, "Se encontró!!!","En la posición",indice);
+    console.log("El numero " + busca + " si existe en la posición "+indice);
 }
 
