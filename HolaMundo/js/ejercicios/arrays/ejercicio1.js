@@ -27,7 +27,6 @@ do {
 } while (contador < 6);
 
 
-
 /*********************************************************************************************
  * 2. MOSTRAR EL ARRAY ENTERO(TODOS SUS ELEMENTOS) EN EL CUERPO DE LA PAGINA Y EN LA CONSOLA *
  *********************************************************************************************/
@@ -59,19 +58,16 @@ function comenta_arreglo(array, comentario = "",posicion = "",indice="") {
     resultado += valores;
     return resultado;
 }
-
-muestra(arreglo);
-
-
 // forin para consolog
-function numeros_consola(arreglos){
+function numeros_consola(arreglos) {
     let resultado = "";
     for (let array in arreglos) {
-        resultado += array + " - " + arreglos[array]+'\n';
+        resultado += array + " - " + arreglos[array] + '\n';
     }
-    return resultado;    
+    return resultado;
 }
 
+muestra(arreglo);
 console.log(numeros_consola(arreglo));
 
 /****************************
@@ -108,7 +104,7 @@ if (busqueda == undefined) {
     document.getElementById('resultado').innerHTML = comenta_arreglo(busca, "No encontrado!!!");
     console.log("El numero "+busca+" no existe!!");
 }else{
-    var indice = arreglo.findIndex(array => array == busca);
+    var indice = arreglo.findIndex(array => array == busqueda);
     document.getElementById('resultado').innerHTML = comenta_arreglo(busca, "Se encontró!!!","En la posición",indice);
     console.log("El numero " + busca + " si existe en la posición "+indice);
 }
