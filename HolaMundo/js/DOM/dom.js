@@ -53,10 +53,10 @@ divAmarillo[0].style.background ="yellow";
 var id = document.querySelector("#encabezado");
 console.log(id);
 
-var claseRojo = document.querySelector(".rojo");
+var claseRojo = document.querySelectorAll(".rojo");
 console.log(claseRojo);
 
-var etiqueta = document.querySelector("div");
+var etiqueta = document.querySelectorAll("div");
 console.log(etiqueta);
 
 //Cuando usamos querySelector, no nos entrega un array
