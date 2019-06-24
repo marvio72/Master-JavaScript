@@ -2,19 +2,35 @@
 
 // DOM- DOCUMENT OBJECT MODEL
 
-function cambia_color(identificador,color){
-    let divisor = document.getElementById(identificador);
-    divisor.style.background = color;
+
+//Conseguir elementos por su etiqueta
+var todosLosDivs = document.getElementsByTagName('div');
+
+
+var seccion = document.querySelector("#miseccion");
+var hr = document.createElement("hr");
+var valor;
+
+//Loop para crear el valor de los divs
+for(valor in todosLosDivs){
+    if(typeof todosLosDivs[valor].textContent == 'string'){
+        var parrafo = document.createElement('p');
+        var texto = document.createTextNode(todosLosDivs[valor].textContent);
+        parrafo.append(texto);
+        seccion.append(parrafo);
+    }
 }
+seccion.append(hr);
 
-var caja = document.getElementById('micaja');
-//Para seleccionar un elemento es mejor usar lo siguiente
-//Con esto seleccionamos cualquier elemento como si fuera css
-var caja = document.querySelector("#micaja")
-caja.innerHTML = "¡TEXTO EN LA CAJA DESDE JS";
-caja.style.background ="red";
-caja.style.padding = "20px";
-caja.style.color = "white";
+var contenidoEnTexto = todosLosDivs[1];
+contenidoEnTexto.innerHTML = "He cambiado el texto";
+contenidoEnTexto.style.background = "green";
+contenidoEnTexto.style.padding = "15px";
+contenidoEnTexto.style.color = "white";
+console.log(contenidoEnTexto);
+//Conseguir elementos por su clase css
 
-//Invocando la función cambia_color
-cambia_color("micaja","black");
+//Diferencias entre la funcion textContent VS innerHTML
+//innderHTML puede desplegar y manipular el texto
+//textContent solo puede mostrarnos el texto
+
