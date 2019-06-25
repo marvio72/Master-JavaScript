@@ -2,6 +2,10 @@
 
 //Eventos
 
+// window.addEventListener('load',function(){
+//     //Todo el contenido
+// });
+//Otra manera
 window.addEventListener('load',()=>{
     //Raton
     var boton = document.querySelector("#boton");
