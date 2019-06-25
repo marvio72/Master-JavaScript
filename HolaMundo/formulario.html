@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio DOM evento y funciones</title>
+    <script src="js/ejercicios/DOM/ejercicio-dom.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 250px;
+            float: left;
+            margin: 20px;
+        }
+        .dashed {
+            border: 1px dashed #000;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        1. Formulario campos: Nombre, Apellidos y edad
+        2. Boton de enviar el formulario: eventos submit
+        3. Mostrar datos por pantalla
+        4. Tener un botón que al darle ckick nos muetra los datos acutlas del formulario.
+    -->
+    <h1>Ejercicio DOM, Eventos y Funciones - Curso JS victorroblesweb.es</h1>
+
+    <div class="box">
+        <form id="formulario" action="#" method="POST" onsubmit="return false;">
+            <label for="nombre" id="label_nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br>
+            
+            <label for="apellidos" id="label_apellido">Apellidos:</label><br>
+            <input type="text" name="apellidos" id="apellido" placeholder="Apellidos"><br>
+
+            <label for="edad">Edad:</label><br>
+            <input type="number" name="edad" id="edad" min=1><br>
+
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+    </div>
+    <div class="box dashed">
+        <h3>Información del usuario</h3>
+        <hr>
+
+    </div>
+</body>
+</html>
