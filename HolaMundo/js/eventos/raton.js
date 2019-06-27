@@ -1,11 +1,5 @@
 'use strict';
 
-//Eventos
-
-// window.addEventListener('load',function(){
-//     //Todo el contenido
-// });
-//Otra manera
 window.addEventListener('load',()=>{
     //Raton
     var boton = document.querySelector("#boton");
@@ -35,11 +29,13 @@ window.addEventListener('load',()=>{
     }
 
     //Raton
-    var boton = document.querySelector("#boton");
+    boton = document.querySelector("#boton");
 
     //Evento click
     boton.addEventListener('click', function () {
         cambiarColor();
+        //Podemos referirnos al boton con la palabra this Ejemplo:
+        this.style.border = "5px solid black";
     });
 
     //Mouse over
