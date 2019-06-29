@@ -13,7 +13,7 @@ window.addEventListener('load', function(){
 
      
 
-     var ul = document.querySelector("#peliculas-list")
+     var ul = document.querySelector("#peliculas-list");
      for (var i in localStorage) {
          
          if (typeof localStorage[i] == 'string') {
