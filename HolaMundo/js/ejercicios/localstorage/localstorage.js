@@ -24,7 +24,7 @@ window.addEventListener('load', function(){
 
      }
 
-     var formularioB = document.querySelector("#formBorrar")
+     var formularioB = document.querySelector("#formBorrar");
      formularioB.addEventListener('submit', function () {
          var titulob = document.querySelector("#delpelicula").value;
         
