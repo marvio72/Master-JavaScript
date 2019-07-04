@@ -25,6 +25,9 @@ window.addEventListener('load', function(){
             .then(data => data.json())
             .then(user => {
                 mostrarJanet(user.data);
+            })
+            .catch(error => {
+                this.alert("Error en las peticiones");
             });
             
 
