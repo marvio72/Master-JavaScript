@@ -19,5 +19,11 @@ window.addEventListener('load', function(){
     `;
     console.log(fecha);
     console.log(textoHora);
+    var div_fecha = this.document.querySelector('#fecha');
+    setInterval(() => {
+        fecha = new Date();
+        div_fecha.innerHTML = fecha;
+        // console.log(fecha);
+    }, 1000);
 
 });
