@@ -26,4 +26,7 @@ window.addEventListener('load', function(){
         // console.log(fecha);
     }, 1000);
 
+
+    //Funciones Matematicas
+    console.log(Math.ceil(Math.random()*100));
 });
