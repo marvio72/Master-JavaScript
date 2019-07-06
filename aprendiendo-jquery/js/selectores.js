@@ -33,5 +33,21 @@ $(document).ready(function() {
         $(this).addClass("zebra");
     });
 
+    /*==============================================================================================
+    SELECCIONAR ETIQUETAS
+    ==============================================================================================*/
+
+    var parrafos = $('p').css("cursor","pointer");
+
+    // cuando le damos un click aumenta o disminuye el tamaño de la fuente
+    // Los hasClass () método comprueba si alguno de los elementos seleccionados tienen un nombre de clase especificada.
+    parrafos.click(function(){
+        var that = $(this);
+        if (!that.hasClass('grande')) {
+            that.addClass('grande');
+        }else{
+            that.removeClass('grande');
+        }
+    });
 
 });
