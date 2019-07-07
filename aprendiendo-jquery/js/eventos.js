@@ -58,6 +58,7 @@ $(document).ready(function(){
     ==============================================================================================*/
 
     var nombre = $('#nombre');
+    var datos = $('#datos');
     // El método preventDefault () cancela el evento si es cancelable, lo que significa que la acción predeterminada que pertenece al evento no ocurrirá.
     nombre.focus(function (e) { 
         e.preventDefault();
@@ -68,6 +69,34 @@ $(document).ready(function(){
     nombre.blur(function (e) { 
         e.preventDefault();
         $(this).css("border", "2px solid #ccc");
-        $("#datos").text($(this).val()).show();
+        datos.text($(this).val()).show();
     });
+
+
+    /*==============================================================================================
+    MOUSEDOWN Y MOUSEUP
+    ==============================================================================================*/
+
+    datos.mousedown(function () { 
+        $(this).css("border-color","gray");
+    });
+
+    datos.mouseup(function () { 
+        $(this).css("border-color","black");
+    });
+
+    /*==============================================================================================
+    MOUSEMOVE
+    ==============================================================================================*/
+
+    $(document).mousemove(function (e) { 
+        // values: e.clientX, e.clientY, e.pageX, e.pageY
+        //Ocultar el cursor
+        $('body').css("cursor","none");
+        $("#sigueme").css("left", event.clientX)
+                     .css("top", event.clientY);
+    });
+
+
+
 });
