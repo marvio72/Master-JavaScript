@@ -38,4 +38,36 @@ $(document).ready(function(){
     }
 
     caja.hover(cambiaRojo,cambiaVerde);
+
+    /*==============================================================================================
+    CLICK, DOBLE CLICK
+    ==============================================================================================*/
+
+    caja.click(function () { 
+        $(this).css("background","blue")
+               .css("color","white"); 
+    });
+
+    caja.dblclick(function () {
+        $(this).css("background", "pink")
+               .css("color", "yellow");
+    });
+
+    /*==============================================================================================
+    EVENTO BLUR Y FOCUS
+    ==============================================================================================*/
+
+    var nombre = $('#nombre');
+    // El método preventDefault () cancela el evento si es cancelable, lo que significa que la acción predeterminada que pertenece al evento no ocurrirá.
+    nombre.focus(function (e) { 
+        e.preventDefault();
+        $(this).css("border","2px solid green");
+    });
+
+    //Con $(this).val() obtenemos el valor del input.
+    nombre.blur(function (e) { 
+        e.preventDefault();
+        $(this).css("border", "2px solid #ccc");
+        $("#datos").text($(this).val()).show();
+    });
 });
