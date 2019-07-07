@@ -57,4 +57,29 @@ $(document).ready(function() {
     $("[title='Google']").css("background","#a10a10")
                          .css("color","white");   
     $("[title='Facebook']").css("background","#23f2d2");
+
+    /*==============================================================================================
+    OTROS
+    ==============================================================================================*/
+
+    //Agregamos un margen superior
+    //Seleccionamos todos los parrafos y todos los ancle.
+    $("p, a").addClass("margen-superior");
+
+    /*==============================================================================================
+    FIND Y PARENT
+    ==============================================================================================*/
+
+    //De esta manera podemos identificar que elementos tiene la clase .resaltado
+    var encontrar = $("#caja").find(".resaltado");
+    console.log('encontrar: ', encontrar);
+
+    //El parent nos sirve para tener acceso a nuestros elementos padres de una etiqueta a otra.
+    //El selector: eq () selecciona un elemento con un número de índice específico.
+    var busqueda = $("#caja .resaltado").eq(0).parent().parent().parent().find("[title='Google']");
+    console.log('busqueda: ', busqueda);
+
+    //Fijemonos que la clase que buscamos esta dentro del div y dentro del ul es necesario ir hasta el div para encontrar a todos los elementos
+    var buscar = $("#elemento2").parent().parent().find(".resaltado");
+    console.log('buscar: ', buscar);
 });
