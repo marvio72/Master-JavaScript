@@ -4,47 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jquery</title>
+    <title>Eventos</title>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/selectores.js"></script>
+    <script type="text/javascript" src="js/eventos.js"></script>
     <style>
-        .zebra{
-            border: 1px dashed black;
+        #caja{
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+            background: yellow;
+            transition: 300ms all;
         }
-        .grande{
-            font-size: 30px;
-        }
-        .margen-superior{
-            display: block;
-            margin-top: 20px;
-        }
-        .resaltado{
-            border-bottom: 1px solid green;
-        }
+        /*
+        #caja:hover{
+            background: red;
+            cursor: pointer;
+        }*/
     </style>
+    
 </head>
 <body>  
-    <h1>Aprendiendo jQuery con Victor Robles WEB</h1>
-    <ul>
-        <li><a href="http://www.google.com" title="Google">Ir a Google</a></li>
-        <li><a href="http://www.facebook.com" title="Facebook">Ir a Facebook</a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
-    </ul>
-    <p id="rojo" class="sin_borde">Ejercicios de jQuery</p>
-    <p id="amarillo" class="zebra">Practicando con selectores</p>
-    <p id="verde" class="sin_borde">Quiero ser un parrafo verde</p>
-    <p class="zebra">Soy un parrafo blanco</p>
-
-    <div id="caja">
-        <p>Hola soy una caja</p>
-        <ul>
-            <li>Elemento 1</li>
-            <li id="elemento2">Elemento 2</li>
-            <li class="resaltado">Elemento 3</li>
-        </ul>
-        <span class="resaltado">Soy un span</span>
-    </div>
+    <h1>Aprendiendo jQuery con Victor Robles WEB - Eventos</h1>
+    
+    <div id="caja">Soy una Caja</div>
+    
 </body>
 </html>       
