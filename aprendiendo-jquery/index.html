@@ -4,60 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eventos</title>
+    <title>Textos en jQuery</title>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/eventos.js"></script>
-    <style>
-        #caja{
-            width: 250px;
-            height: 250px;
-            border: 2px solid black;
-            background: yellow;
-            transition: 300ms all;
-        }
-        /*
-        #caja:hover{
-            background: red;
-            cursor: pointer;
-        }*/
-        input{
-            padding: 10px;
-            width: 300px;
-            font-size: 20px;
-        }
-        #datos{
-            border: 3px dashed black;
-            padding: 10px;
-            width: 250px;
-            height: 50px;
-            margin-top: 10px;
-            display: none;
-        }
-        #sigueme{
-            width: 25px;
-            height: 25px;
-            position: absolute;
-            display: block;
-            background: yellow;
-            opacity: 0.3;
-            border-radius: 999px;
-            border: 2px solid black;
-        }
-    </style>
+    <script type="text/javascript" src="js/textos.js"></script>
+    
     
 </head>
 <body>  
-    <h1>Aprendiendo jQuery con Victor Robles WEB - Eventos</h1>
+    <h1>Aprendiendo jQuery con Victor Robles WEB - Textos</h1>
 
-    <div id="sigueme"></div>
+    <h3>Añadir nuevos enlaces</h3>
+    <input type="texto" id="add_link">
+    <button id="add_button" disabled="disabled">Añadir</button>
 
-    <form>
-        <input type="text" id="nombre">
-    </form>
-    <div id="datos"></div>
-    <br>
-    
-    <div id="caja">Soy una Caja</div>
-    
+    <ul id="menu">
+        <li><a href="https://google.com"></a></li>
+        <li><a href="https://facebook.com"></a></li>
+        <li><a href="https://twetter.com"></a></li>
+        <li><a href="https://youtube.com"></a></li>
+       
+    </ul>
 </body>
 </html>       
