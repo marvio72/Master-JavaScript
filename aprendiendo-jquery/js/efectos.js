@@ -41,7 +41,9 @@ $(document).ready(function(){
         }else{
             elemento.text('Abrir');
         }
-        caja.slideToggle('slow');
+        caja.slideToggle('slow', function(){
+            console.log("Cartel Ocultado");
+        });
     });
 
     /*
@@ -54,6 +56,8 @@ $(document).ready(function(){
     /*==============================================================================================
     ANIMACIONES PERSONALIZADAS
     ==============================================================================================*/
+
+    //agregamos una callback al termino del efecto.
 
     $('#animar').click(function (e) { 
         e.preventDefault();
@@ -74,7 +78,9 @@ $(document).ready(function(){
                         fontSize: '19px',
                         height: '50px',
                         borderRadius: '0px'    
-                    }, 'slow');
+                    }, 'slow', function(){
+                        console.log('Terminamos');
+                    });
     });
     
 });
