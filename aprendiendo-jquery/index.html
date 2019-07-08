@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Textos en jQuery</title>
+    <title>Efectos con jQuery</title>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/textos.js"></script>
+    <script type="text/javascript" src="js/efectos.js"></script>
+    <style>
+        #caja{
+            width: 250px;
+            height: 50px;
+            background:#ccc;
+            border: 3px dashed black;
+            font-family: Verdana;
+            font-size: 19px;
+            color: black;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 20px;
+        }
+    </style>
     
     
 </head>
 <body>  
-    <h1>Aprendiendo jQuery con Victor Robles WEB - Textos</h1>
+    <h1>Aprendiendo jQuery con Victor Robles - Efectos</h1>
 
-    <h3>Añadir nuevos enlaces</h3>
-    <input type="texto" id="add_link">
-    <button id="add_button" disabled="disabled">Añadir</button>
+    <!-- <button id="mostrar">Mostrar</button>
+    <button id="ocultar">Ocultar</button> -->
+   
+    <button id="todoEnUno">Abrir</button>
 
-    <ul id="menu">
-        <li><a href="https://google.com"></a></li>
-        <li><a href="https://facebook.com"></a></li>
-        <li><a href="https://twetter.com"></a></li>
-        <li><a href="https://youtube.com"></a></li>
-       
-    </ul>
+    <button id="animar">Animame!!</button>
+
+    
+
+
+
+    <div id="caja">Master en JavaScript</div>
 </body>
 </html>       
