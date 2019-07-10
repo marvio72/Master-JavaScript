@@ -13,14 +13,18 @@
            border: 1px solid green;
            width: 250px;
            height: 250px;
-           padding-top: 20px;  
+           margin-top: 20px;  
            overflow: scroll;
         }
     </style>
 </head>
 <body>
     <h1>Master de Javascript con Victor Robles - Ajax</h1>
-
+    <form action="https://reqres.in/api/users" method="post" id="formulario">
+        Nombre: <input type="text" name="name" id="name">
+        Web: <input type="url" name="web" id="web" > 
+        <input type="submit" value="Enviar">
+    </form>
     <div id="datos">
 
     </div>

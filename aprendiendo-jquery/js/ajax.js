@@ -20,5 +20,22 @@ $(document).ready(function(){
     /*==============================================================================================
     METODO POST
     ==============================================================================================*/
-    
+
+    $("#formulario").submit(function(e){
+        e.preventDefault();
+        var usuario = {
+            name: $('input[name = "name]').val(), 
+            web: $('input[web = "web"]').val()
+        };
+
+        console.log(usuario);
+
+        $.post($(this).attr("action"), usuario, function (response) {
+            console.log(response);
+        }).done(function(){
+            alert("Usuario añadido correctamente");
+        });
+        return false;
+    });
+
 });
