@@ -21,21 +21,48 @@ $(document).ready(function(){
     METODO POST
     ==============================================================================================*/
 
-    $("#formulario").submit(function(e){
+    // $("#formulario").submit(function(e){
+    //     e.preventDefault();
+    //     var usuario = {
+    //         name: $('input[name = "name"]').val(), 
+    //         web: $('input[name = "web"]').val()
+    //     };
+
+    //     console.log(usuario);
+
+    //     $.post($(this).attr("action"), usuario, function (response) {
+    //         console.log(response);
+    //     }).done(function(){
+    //         alert("Usuario añadido correctamente");
+    //     });
+    //     return false;
+    // });
+
+    /*==============================================================================================
+    METODO AJAX 
+    ==============================================================================================*/
+    $("#formulario").submit(function (e) {
         e.preventDefault();
         var usuario = {
-            name: $('input[name = "name]').val(), 
-            web: $('input[web = "web"]').val()
+            name: $('input[name = "name"]').val(), 
+            web: $('input[name = "web"]').val()
         };
-
-        console.log(usuario);
-
-        $.post($(this).attr("action"), usuario, function (response) {
-            console.log(response);
-        }).done(function(){
-            alert("Usuario añadido correctamente");
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: usuario,
+            beforeSend: function(){
+                console.log("Enviando usuario...");
+            },
+            success: function (response) {
+                console.log(response);
+                alert("Usuario enviado Correctamente");
+            },
+            error: function(){
+                console.log("A ocurrido un error");
+            },
+            timeout: 1000
         });
         return false;
-    });
-
+    });   
 });
