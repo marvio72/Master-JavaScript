@@ -30,4 +30,18 @@ $(document).ready(function(){
         }
     });
 
+    //Efectos 
+    $("#mostrar").click(function(){
+        // $(".caja-efectos").fadeToggle();
+        // $(".caja-efectos").toggle("explode");
+        // $(".caja-efectos").toggle("blind");
+        // $(".caja-efectos").toggle("slide");
+        // $(".caja-efectos").toggle("drop");
+        // $(".caja-efectos").toggle("fold");
+        // $(".caja-efectos").toggle("puff");
+        // $(".caja-efectos").toggle("shake", "slow");
+        $(".caja-efectos").toggle("shake", 4000);
+
+    });
+
 });
