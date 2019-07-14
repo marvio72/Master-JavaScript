@@ -9,5 +9,9 @@ $(document).ready(function(){
     $(".elemento").resizable();
 
 
+    
+    // Seleccionar y ordenar elementos
+    $(".lista-seleccionable").selectable();
+    
 
 });
