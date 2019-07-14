@@ -11,7 +11,23 @@ $(document).ready(function(){
 
     
     // Seleccionar y ordenar elementos
-    $(".lista-seleccionable").selectable();
+    // Se documenta para que funcione sortable
+    // $(".lista-seleccionable").selectable();
     
+
+    //Ordenar nuestra lista como queramos.
+    $(".lista-seleccionable").sortable({
+        update: function(event, ui){
+            console.log("Ha cambiado la lista");
+        }
+    });
+
+    //DROP
+    $("#elemento-movido").draggable();
+    $("#area").droppable({
+        drop: function () {
+            console.log("Has soltado algo dentro del area");
+        }
+    });
 
 });
