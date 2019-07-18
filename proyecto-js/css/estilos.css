@@ -1,0 +1,38 @@
+/*
+                              d8,           d8b       d8b
+                             `8P            ?88       88P
+                                             88b     d88
+?88   d8P d888b8b    88bd88b  88b d888b8b    888888b 888   d8888b .d888b,
+d88  d8P'd8P' ?88    88P'  `  88Pd8P' ?88    88P `?8b?88  d8b_,dP ?8b,
+?8b ,88' 88b  ,88b  d88      d88 88b  ,88b  d88,  d88 88b 88b       `?8b
+`?888P'  `?88P'`88bd88'     d88' `?88P'`88bd88'`?88P'  88b`?888P'`?888P'
+*/
+
+:root {
+    --fuente-principal: 'Oswald', sans-serif;
+    --fuente-secundaria: 'Raleway', sans-serif;
+}
+
+/*
+           d8b          d8b                 d8b
+           88P          ?88                 88P
+          d88            88b               d88
+ d888b8b  888   d8888b   888888b  d888b8b  888   d8888b .d888b,
+d8P' ?88  ?88  d8P' ?88  88P `?8bd8P' ?88  ?88  d8b_,dP ?8b,
+88b  ,88b  88b 88b  d88 d88,  d8888b  ,88b  88b 88b       `?8b
+`?88P'`88b  88b`?8888P'd88'`?88P'`?88P'`88b  88b`?888P'`?888P'
+       )88
+      ,88P
+  `?8888P
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: var(--fuente-secundaria);
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
