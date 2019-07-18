@@ -51,6 +51,9 @@ $(document).ready(function(){
     $("#lanzar-popup").click(function () {
         $("#popup").dialog();
     });
+
+    //Calendario
+    $("#calendario").datepicker();
     
 
 });
