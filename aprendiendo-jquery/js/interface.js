@@ -45,12 +45,12 @@ $(document).ready(function(){
     });
 
     //Tooltips
-    $(document).tooltip();
+    // $(document).tooltip();
 
-    // //Cuadros de dialogo
-    // $("#lanzar-popup").click(function () {
-    //     $("#popup").dialog();
-    // });
+    //Cuadros de dialogo
+    $("#lanzar-popup").click(function () {
+        $("#popup").dialog();
+    });
     
 
 });
