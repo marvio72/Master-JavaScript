@@ -27,8 +27,8 @@
                 <h1>Proyecto js</h1>
             </div>
             <div class="clearfix"></div>
-            <nav>
-                <ul id="menu">
+            <nav id="menu">
+                <ul>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Reloj</a></li>
                     <li><a href="#">Sobre Mi</a></li>
@@ -53,25 +53,55 @@
             <div id="posts">
                 <article class="post">
                     <h2>Lorem, ipsum.</h2>
-                    <span>Publicado el Miércoles 11 de Abril del año 2018</span>
+                    <span class="date">Publicado el Miércoles 11 de Abril del año 2018</span>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore enim soluta qui hic, suscipit corrupti illum optio autem temporibus recusandae eius repellendus libero doloremque ab! Beatae doloribus a illo, consequatur non ipsa saepe earum fugit reprehenderit quia neque laboriosam harum cum veritatis doloremque quod dignissimos, vel architecto nulla maiores, ex nemo laudantium odio magni. Quidem doloremque veniam corporis nostrum voluptas.</p>
+                    <a href="#" class="button-more">Leer más</a>
+                </article>
+                <article class="post">
+                    <h2>Lorem, ipsum.</h2>
+                    <span class="date">Publicado el Miércoles 11 de Abril del año 2018</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore enim soluta qui hic, suscipit corrupti illum optio autem temporibus recusandae eius repellendus libero doloremque ab! Beatae doloribus a illo, consequatur non ipsa saepe earum fugit reprehenderit quia neque laboriosam harum cum veritatis doloremque quod dignissimos, vel architecto nulla maiores, ex nemo laudantium odio magni. Quidem doloremque veniam corporis nostrum voluptas.</p>
+                    <a href="#" class="button-more">Leer más</a>
                 </article>
 
             </div>
             <aside id="sidebar">
-                <h3>¿Quién soy?</h3>
-                <img src="img/caracol.jpg" alt="Caracol">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sit consequatur quisquam dolore voluptate voluptas non optio libero atque. Iure facere nihil tempora explicabo et perspiciatis quam corrupti animi! Consequatur.</p>
+                <div id="about">
+                    <h4><span>¿Quién soy?</span></h4>
+                    <img src="img/caracol.jpg" alt="Caracol">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, sit consequatur quisquam dolore voluptate voluptas non
+                        optio libero atque.</p>
+                </div>
+
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name">
+                        <label for="email">Correo</label>
+                        <input type="email" name="email" id="email">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password">
+                        <input type="submit" value="Entrar">
+
+                    </form>
+                </div>
+                
             </aside>
+            <div class="clearfix"></div>
         </section>
+        
+
     </section>
+
+    <footer>
+        Master de javascript &copy;
+    </footer>
 
     <!--***************   *** Comentario *** ****************
     /* FOOTER
     /*****************   *** ********** *** ****************-->
-    <footer>
-        Master de javascript &copy;
-    </footer>
+    
 
 </body>
 </html>
