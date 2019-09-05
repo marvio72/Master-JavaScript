@@ -1,17 +1,21 @@
 $(document).ready(function(){
-    'use strict';
+    // 'use strict';
 
     // SLIDER
-    $('.galeria').bxSlider({
-        mode: 'fade',
-        captions: false,
-        slideWidth: 1200,
-        responsive: true,
-        pager: true
-    });
+    if (window.location.href.indexOf('index') > -1) {
+        $(".galeria").bxSlider({
+          mode: "fade",
+          captions: false,
+          slideWidth: 1200,
+          responsive: true,
+          pager: true
+        });
+    }
+    
 
     // POSTS
-    var posts = [
+    if (window.location.href.indexOf('index') > -1) {
+        var posts = [
         {
             title: 'Prueba de titulo',
             date: 'Publicado el ' + moment().format("dddd D") + ' de ' + moment().format("MMMM") + ' del ' + moment().format("YYYY"),
@@ -44,10 +48,10 @@ $(document).ready(function(){
         }
     ];
 
-    posts.forEach((item,index) => {
-        var post = `
+    posts.forEach((item, index) => {
+      var post = `
             <article class="post">
-            <h2>${item.title} ${index+1}</h2>
+            <h2>${item.title} ${index + 1}</h2>
             <span class="date">${item.date}</span>
             <p>${item.content}</p>
             <a href="#" class="button-more">
@@ -55,8 +59,12 @@ $(document).ready(function(){
             </a>
             </article>`;
 
-            $("#posts").append(post);
+      $("#posts").append(post);
     });
+    }
+    
+
+    
 
     /*==============================================================================================
     SELECTOR DEL TEMA
