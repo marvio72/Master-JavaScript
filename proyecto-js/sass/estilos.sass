@@ -1,3 +1,8 @@
+// VARIABLES
+$verde: #235e3d
+$azul:#1f87c4
+$rojo:#ca3413
+
 *
     padding: 0
     margin: 0
@@ -6,10 +11,6 @@
 .clearfix
     float: none
     clear: both
-
-body 
-    background: url('../img/hojas.jpg')
-    background-attachment: fixed
 
 .global
     background: #ffffff
@@ -24,7 +25,6 @@ body
     font-size: 22px
     letter-spacing: 4px
     line-height: 34px
-    background: #235e3d
     color: white
     text-align: center
     width: 385px
@@ -48,9 +48,6 @@ body
     height: 46px
     display: inline-block
     transition: all 300ms
-
-#menu li:hover 
-    background: #235e23
 
 #menu a
     display: block
@@ -84,7 +81,6 @@ body
     text-align   : justify
 
 .button-more
-    background     : #235e23
     color          : #ffffff
     display        : block
     font-size      : 14px
@@ -149,3 +145,32 @@ footer
 
 .bx-wrapper, .bx-viewport
     height: 250px !important
+     
+//Seleccionar los temas
+#selector-theme
+    position: fixed
+    top: 40%
+    background: rgba(51,51,51,0.5)
+    width: 50px
+    height: 100px
+
+#to-green,
+#to-red,
+#to-blue
+    width: 25px
+    height: 25px
+    border: 1px solid white
+    display: block
+    margin: 0px auto
+    margin-top: 5px
+    margin-bottom: 5px
+    cursor: pointer
+    
+#to-green
+    background: $verde
+
+#to-red
+    background: $rojo
+
+#to-blue
+    background: $azul

@@ -1,0 +1,14 @@
+body {
+  background: url("../img/hojas.jpg");
+  background-attachment: fixed; }
+
+#logo {
+  background: #235e3d; }
+
+#menu li:hover {
+  background: #235e3d; }
+
+.button-more {
+  background: #235e3d; }
+
+/*# sourceMappingURL=green.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,IAAI;EACA,UAAU,EAAE,sBAAsB;EAClC,qBAAqB,EAAE,KAAK;;AAEhC,KAAK;EACD,UAAU,EAPR,OAAO;;AASb,cAAc;EACV,UAAU,EAVR,OAAO;;AAYb,YAAY;EACR,UAAU,EAbR,OAAO",
+"sources": ["../sass/red.sass"],
+"names": [],
+"file": "red.css"
+}

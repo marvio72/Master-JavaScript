@@ -58,5 +58,31 @@ $(document).ready(function(){
             $("#posts").append(post);
     });
 
+    /*==============================================================================================
+    SELECTOR DEL TEMA
+    ==============================================================================================*/
+    var theme = $("#theme");
+    $("#to-green").click(function(){
+        theme.attr("href","css/green.css");
+        localStorage.setItem("tema","css/green.css");
+    });
+    $("#to-red").click(function(){
+        theme.attr("href","css/red.css");
+        localStorage.setItem("tema", "css/red.css");
+    });
+    $("#to-blue").click(function(){
+        theme.attr("href","css/blue.css");
+        localStorage.setItem("tema", "css/blue.css");
+    });
+
+    /*==============================================================================================
+    MANTENER EL TEMA QUE HABIAMOS SELECCIONADO
+    ==============================================================================================*/
+    function tema(){
+        theme.attr("href", localStorage.getItem("tema"));
+    }
+
+    $(window).on("load",tema);
+
 });
     
