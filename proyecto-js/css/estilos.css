@@ -113,7 +113,10 @@ h2 {
 
 form input[type="text"],
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="number"],
+form input[type="date"],
+select {
   border: 1px solid gray;
   border-radius: 2px;
   margin-bottom: 10px;
@@ -193,5 +196,24 @@ footer {
   padding: 20px;
   margin: 0 auto;
   font-weight: bold; }
+
+#form_contact {
+  font-family: Helvetica, Arial;
+  margin-top: 15px;
+  width: 60%; }
+
+#form_contact label {
+  display: block;
+  width: 100%;
+  margin-top: 5px; }
+
+.form-error {
+  background: #ca3413;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 7px;
+  display: block;
+  margin-top: 10px;
+  width: 85%; }
 
 /*# sourceMappingURL=estilos.css.map */
