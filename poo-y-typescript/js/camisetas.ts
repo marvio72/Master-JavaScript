@@ -36,6 +36,13 @@ class Carro{
   private precio: number;
 
   //Métodos ( Funcioness o acciones del objeto)
+  constructor(color, marca, modelo, precio){
+    this.color = color;
+    this.marca = marca;
+    this.modelo = modelo;
+    this.precio = precio;
+  }
+
   public setColor(color){
     this.color = color;
   }
@@ -45,8 +52,7 @@ class Carro{
   }
 }
 
-var auto = new Carro();
-auto.setColor("Blanco");
-var coche = new Carro();
-coche.setColor("Negro");
-console.log(auto.getColor(), coche.getColor());
+var auto = new Carro("rojo", "Fiesta", 2016, 255000);
+auto.setColor("Negro");
+
+console.log(auto);

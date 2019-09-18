@@ -18,9 +18,13 @@ playera.talla = "lL";
 playera.precio = 230;
 console.log(camiseta, playera);
 var Carro = /** @class */ (function () {
-    function Carro() {
-    }
     //Métodos ( Funcioness o acciones del objeto)
+    function Carro(color, marca, modelo, precio) {
+        this.color = color;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+    }
     Carro.prototype.setColor = function (color) {
         this.color = color;
     };
@@ -29,8 +33,6 @@ var Carro = /** @class */ (function () {
     };
     return Carro;
 }());
-var auto = new Carro();
-auto.setColor("Blanco");
-var coche = new Carro();
-coche.setColor("Negro");
-console.log(auto.getColor(), coche.getColor());
+var auto = new Carro("rojo", "Fiesta", 2016, 255000);
+auto.setColor("Negro");
+console.log(auto);
