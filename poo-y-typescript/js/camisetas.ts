@@ -1,6 +1,10 @@
+// Interface
+interface CarroBase{
+  setColor(color);
+  getColor();
+}
 
-
-export class Carro{
+class Carro implements CarroBase{
   private color: string;
   private marca: string;
   private modelo: number;
@@ -22,3 +26,6 @@ export class Carro{
     return this.color;
   }
 }
+
+var auto = new Carro("Negro","Fiesta",2016,255000);
+console.log(auto);

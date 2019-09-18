@@ -1,4 +1,4 @@
-import {Carro} from './camisetas';
+
 
 class Main{
   constructor(){
