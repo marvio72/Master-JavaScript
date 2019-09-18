@@ -27,5 +27,26 @@ class Carro implements CarroBase{
   }
 }
 
+
+//Clase Hija
+class Deportivo extends Carro{
+  public superCargado: boolean;
+
+  setSuperCargado(superCargado: boolean){
+    this.superCargado = superCargado;
+  }
+
+  getSuperCargado():boolean{
+    return this.superCargado;
+  }
+
+}
+
 var auto = new Carro("Negro","Fiesta",2016,255000);
 console.log(auto);
+
+var superCargado = new Deportivo("Blanco","Neon", 2005, 25000);
+superCargado.setSuperCargado(true);
+superCargado.setColor("Rojo");
+
+console.log(superCargado);
