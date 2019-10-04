@@ -1,4 +1,6 @@
 <h1>{{titulo}}</h1>
-<videojuego></videojuego>
+<button (click)="ocultarVideojuegos(false)" *ngIf="mostrarVideojuegos">Ocultar</button>
+<button (click)="ocultarVideojuegos(true)" *ngIf="!mostrarVideojuegos">Mostrar</button>
+<videojuego *ngIf="mostrarVideojuegos"></videojuego>
 <zapatillas></zapatillas>
 <app-cursos></app-cursos>

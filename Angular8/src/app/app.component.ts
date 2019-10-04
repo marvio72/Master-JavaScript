@@ -6,5 +6,10 @@
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titulo = 'Angular8';
+  public titulo = 'Angular8';
+  public mostrarVideojuegos: boolean = true;
+
+  ocultarVideojuegos(value) {
+    this.mostrarVideojuegos = value;
+  }
 }
