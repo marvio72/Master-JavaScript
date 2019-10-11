@@ -1,6 +1,6 @@
 <h2>{{titulo}}</h2>
 <ul>
-  <li>Rebook Classic</li>
-  <li>Fila Retro</li>
-  <li>Adidas Yezzy</li>
+  <li *ngFor="let deportiva of zapatillas">
+    {{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong>
+  </li>
 </ul>
