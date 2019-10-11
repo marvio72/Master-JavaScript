@@ -1,11 +1,24 @@
 <h2>{{titulo}}</h2>
+<p>Compra las zapatillas de las mejores marcas</p>
+<ul>
+  <li *ngFor="let marca of marcas; let indice = index">{{indice + ' ' + marca}}</li>
+</ul>
+<p>Las deportivas que tenemos disponibles son:</p>
 <ul>
   <li *ngFor="let deportiva of zapatillas">
-    {{deportiva.nombre}} - <strong>${{deportiva.precio}} </strong>
+
+    <span [ngStyle]="{
+      'text-decoration': !deportiva.stock ? 'line-through' : 'none'
+    }">
+      {{deportiva.nombre}} - <strong>${{deportiva.precio}} </strong>
+    </span>
+    
+   
 
     <span *ngIf="deportiva.precio <= 80"
       [style.background]="deportiva.precio <= 80 ? 'green' : 'transparent'"
       [style.color]="deportiva.precio <= 80 ? 'yellow' : '#cccccc'"
       >¡EN OFERTA!</span>
+    
   </li>
 </ul>
