@@ -22,3 +22,32 @@
     
   </li>
 </ul>
+
+<p>El color de la maoria de nuestras zapatillas es:</p>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase = "'yellow'">
+    El color predominante es el <span [ngStyle]="{
+      'background': color,
+      'color': 'black'
+    }"> amarillo </span>
+  </li>
+  <li *ngSwitchCase = "'red'">
+    El color predominante es el <span [ngStyle]="{
+      'background': color,
+      'color': 'white'
+    }"> rojo </span>
+  </li>
+  <li *ngSwitchCase = "'blue'">
+    El color predominante es el <span [ngStyle]="{
+      'background': color,
+      'color': 'white'
+    }"> azul </span>
+  </li>
+  <li *ngSwitchCase = "'orange'">
+    El color predominante es el <span [ngStyle]="{
+      'background': color,
+      'color': 'black'
+    }"> naranja </span>
+  </li>
+  
+</ul>

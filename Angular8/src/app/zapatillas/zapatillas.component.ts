@@ -10,14 +10,15 @@ export class ZapatillasComponent implements OnInit {
 
   public titulo: string = 'Zapatillas de temporada';
   public zapatillas: Array<Zapatilla>;
-  // tslint:disable-next-line: ban-types
-  public marcas: String[];
+  public marcas: string[];
+  public color: string;
 
   constructor() {
+    this.color = 'blue';
     this.marcas = new Array();
     this.zapatillas = [
       new Zapatilla('Rebook Classic', 'Rebook', 'Blanco', 80, true),
-      new Zapatilla('Aero', 'Nike', 'Negro', 87, true),
+      new Zapatilla('Aero', 'Nike', 'Negro', 87, false),
       new Zapatilla('Samba', 'Adidas', 'Negro', 129, true),
       new Zapatilla('Durango', 'Nike', 'Gris', 67, false)
     ];
