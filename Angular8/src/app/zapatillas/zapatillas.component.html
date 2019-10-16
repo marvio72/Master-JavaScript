@@ -1,4 +1,11 @@
 <h2>{{titulo}}</h2>
+<p>Añadir marca</p>
+<p>
+<input type="text" [(ngModel)]="miMarca" >
+<button (click) = "get_Marca()">Mostrar marca</button>
+<button (click) = "addMarca()">Añadir marca</button>
+</p>
+<strong>{{miMarca}}</strong>
 <p>Compra las zapatillas de las mejores marcas</p>
 <ul>
   <li *ngFor="let marca of marcas; let indice = index">{{indice + ' ' + marca}}</li>
