@@ -31,6 +31,7 @@
 </ul>
 
 <p>El color de la maoria de nuestras zapatillas es:</p>
+<input type="text" [(ngModel)]="color">
 <ul [ngSwitch]="color">
   <li *ngSwitchCase = "'yellow'">
     El color predominante es el <span [ngStyle]="{
