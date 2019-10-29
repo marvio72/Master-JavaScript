@@ -10,3 +10,7 @@
 .subrayado {
   text-decoration: underline;
 }
+
+.active {
+  border: 1px solid red;
+}
