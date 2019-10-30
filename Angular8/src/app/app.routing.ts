@@ -15,6 +15,7 @@ const appRoutes: Routes = [
   {path: 'zapatillas', component: ZapatillasComponent},
   {path: 'videojuego', component: VideoJuegoComponent},
   {path: 'cursos', component: CursosComponent},
+  {path: 'cursos/:nombre/:followers', component: CursosComponent},
   {path: '**', component: HomeComponent}
 ];
 
