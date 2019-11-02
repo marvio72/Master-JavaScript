@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PeticionesService } from '../services/peticiones.service';
+import * as moment from "moment";
 
 @Component({
   selector: 'app-externo',
@@ -11,6 +12,7 @@ export class ExternoComponent implements OnInit {
 
     public user: any;
     public userId: any;
+    public fecha: any;
 
   constructor(
     private _peticionesService: PeticionesService
@@ -19,6 +21,8 @@ export class ExternoComponent implements OnInit {
   }
 
   ngOnInit() {
+    moment.locale('es');
+    this.fecha = new Date();
     this.cargaUsuario();
   }
 

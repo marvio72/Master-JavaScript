@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { routing, appRoutingProviders } from './app.routing';
 import { HttpClientModule } from "@angular/common/http";
+import { MomentPipe } from "./momentPipe";
+
 
 import { AppComponent } from './app.component';
 import { VideoJuegoComponent } from './videojuego/videojuego.component';
@@ -20,7 +22,8 @@ import { ExternoComponent } from './externo/externo.component';
     ZapatillasComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    MomentPipe
   ],
   imports: [
     BrowserModule,

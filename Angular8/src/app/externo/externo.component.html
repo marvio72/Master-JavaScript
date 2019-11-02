@@ -1,3 +1,9 @@
+{{fecha | date:'dd/MM/yy'}}<br>
+{{fecha | date:'fullDate'}}<br>
+{{fecha | dateFormat:'LLLL'}}
+
+<hr>
+
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
 <div *ngIf="!user">
   Cargando...
