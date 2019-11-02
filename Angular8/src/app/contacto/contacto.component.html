@@ -1,6 +1,6 @@
 <h2>Contacto</h2>
 
-<form #formContacto = 'ngForm' (ngSubmit)='onSubmit()'>
+<form #formContacto = 'ngForm' (ngSubmit)='onSubmit(formContacto)'>
   <label for="nombre">Nombre</label><br>
   <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto_usuario.nombre" required pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ ]+">
   <div *ngIf='nombre.touched && !nombre.valid' style="background: red; display: inline-block;">

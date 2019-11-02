@@ -9,6 +9,7 @@ import { ContactoUsuario } from '../models/contacto.usuario';
 })
 export class ContactoComponent implements OnInit {
   public contacto_usuario: ContactoUsuario;
+  public show_data;
 
   constructor() {
     this.contacto_usuario = new ContactoUsuario('', '', '', '');
@@ -17,8 +18,9 @@ export class ContactoComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit() {
-    console.log('Evento submit lanzado');
-    console.log(this.contacto_usuario);
+  onSubmit(form) {
+    this.show_data = this.contacto_usuario;
+    console.log(this.show_data);
+    // form.reset();
   }
 }
