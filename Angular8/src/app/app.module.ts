@@ -12,7 +12,8 @@ import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
-// import { appRoutingProviders } from './app.routing';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
+
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ExternoComponent } from './externo/externo.component';
     CursosComponent,
     HomeComponent,
     ExternoComponent,
-    MomentPipe
+    MomentPipe,
+    CalculadoraPipe
   ],
   imports: [
     BrowserModule,
