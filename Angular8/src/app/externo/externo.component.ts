@@ -21,8 +21,8 @@ export class ExternoComponent implements OnInit {
   ) {
     this.userId = 1;
     this.new_user = {
-      'name': '',
-      'job': ''
+      name: '',
+      job: ''
     };
   }
 
@@ -47,6 +47,7 @@ export class ExternoComponent implements OnInit {
     this._peticionesService.addUser(this.new_user).subscribe(
       response => {
         this.usuario_guardado = response;
+        console.log(response);
 
         form.reset();
       },

@@ -21,8 +21,9 @@
 
 <div *ngIf="usuario_guardado">
   <h2>El usuario se ha guardado correctamente</h2>
-  <h3>{{usuario_guardado.name}}</h3>
+  <h3>{{usuario_guardado.id + " " + usuario_guardado.name}}</h3>
   <h4>{{usuario_guardado.job}}</h4>
+  <h4>Creado el {{usuario_guardado.createdAt | formatoDate: 'LLL'}}</h4>
 </div>
 <hr>
 
