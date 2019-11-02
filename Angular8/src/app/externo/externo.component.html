@@ -1,3 +1,31 @@
+<h2>Crear usuario</h2>
+
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+  <p>
+    <label for="name">Nombre</label>
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="new_user.name" required>
+    <span *ngIf="name.touched && !name.valid">
+      Nombre no valido
+    </span>
+  </p>
+  <p>
+    <label for="job">Trabajo</label>
+    <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required>
+    <span *ngIf="job.touched && !job.valid">
+      Trabajo no valido
+    </span>
+  </p>
+
+  <input type="submit" value="Guardar usuario" [disabled]="!newUser.form.valid">
+</form>
+
+<div *ngIf="usuario_guardado">
+  <h2>El usuario se ha guardado correctamente</h2>
+  <h3>{{usuario_guardado.name}}</h3>
+  <h4>{{usuario_guardado.job}}</h4>
+</div>
+<hr>
+
 {{fecha | date:'dd/MM/yy'}}<br>
 {{fecha | date:'fullDate'}}<br>
 <!-- {{fecha | formatoDate:'LLL'}}<br> -->
@@ -15,3 +43,8 @@
   <img src="{{user.avatar}}" width="100">
   <p>{{user.email}}</p>
 </div>
+
+<hr>
+
+
+
