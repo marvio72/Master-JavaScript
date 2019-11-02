@@ -13,6 +13,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
 import { CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 
@@ -25,7 +26,8 @@ import { CalculadoraPipe } from './pipes/calculadora.pipe';
     HomeComponent,
     ExternoComponent,
     MomentPipe,
-    CalculadoraPipe
+    CalculadoraPipe,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

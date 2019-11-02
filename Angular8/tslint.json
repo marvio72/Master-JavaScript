@@ -85,7 +85,7 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-    "variable-name": [true, "check-format", "allow-leading-underscore"]
+    "variable-name": [true, "check-format", "allow-leading-underscore", "allow-snake-case"]
   },
   "rulesDirectory": [
     "codelyzer"
