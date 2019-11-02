@@ -2,13 +2,37 @@
 
 <form #formContacto = 'ngForm' (ngSubmit)='onSubmit()'>
   <label for="nombre">Nombre</label><br>
-  <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto_usuario.nombre"><br>
+  <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto_usuario.nombre" required pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ ]+">
+  <div *ngIf='nombre.touched && !nombre.valid' style="background: red; display: inline-block;">
+    <span>
+      El nombre no es valido o esta vacio
+    </span>
+  </div>
+  <br>
   <label for="apellidos">Apellidos</label><br>
-  <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="contacto_usuario.apellidos"><br>
+  <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="contacto_usuario.apellidos" required
+    pattern="[a-zA-ZáéíóúüÁÉÍÓÚÜ ]+">
+    <div *ngIf='apellidos.touched && !apellidos.valid'
+      style="background: red; display: inline-block;">
+      <span>
+        El apellido no es valido o esta vacio
+      </span>
+    </div><br>
   <label for="email">Email</label><br>
-  <input type="text" name="email" #email="ngModel" [(ngModel)]="contacto_usuario.email"><br>
+  <input type="email" name="email" #email="ngModel" [(ngModel)]="contacto_usuario.email" required
+    pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+  <div *ngIf='email.touched && !email.valid' style="background: red; display: inline-block;">
+    <span>
+      El email no es valido o esta vacio
+    </span>
+  </div><br>
   <label for="mensaje">Mensaje</label><br>
-  <textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto_usuario.mensaje"></textarea><br><br>
+  <textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto_usuario.mensaje" required></textarea>
+  <div *ngIf='mensaje.touched && !mensaje.valid' style="background: red; display: inline-block;">
+    <span>
+      El mensaje no es valido o esta vacio
+    </span>
+  </div><br><br>
 
-  <input type="submit" value="Enviar">
+  <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
 </form>
