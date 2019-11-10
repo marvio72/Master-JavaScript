@@ -4,8 +4,18 @@
   "description": "Api Rest del master de Javascrip",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "Marco Ruvalcaba",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }
