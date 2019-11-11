@@ -26,7 +26,13 @@ app.get('/', (req, res) => {
   );
 });
 
-app.get('/test', (req, res) => {
+app.post('/test/:id', (req, res) => {
+  //body
+  console.log(req.body.nombre);
+  //query
+  console.log(req.query.web);
+  //params corresponde al valor del parametro despues de la ruta
+  console.log(req.params.id);
   res.status(200).send({
     message: "Hola Mundo desde mi API desde Node Js"
   });
