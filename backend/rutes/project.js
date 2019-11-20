@@ -12,5 +12,7 @@ router.post('/save-project', ProjectController.saveProject);
 router.get('/project/:id?', ProjectController.getProject);
 // Despliega lista de proyectos.
 router.get('/projects', ProjectController.getProjects);
+// Actualiza datos de el proyecto que seleccionemos. 
+router.put('/project/:id', ProjectController.updateProject);
 
 module.exports = router;
