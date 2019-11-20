@@ -14,5 +14,7 @@ router.get('/project/:id?', ProjectController.getProject);
 router.get('/projects', ProjectController.getProjects);
 // Actualiza datos de el proyecto que seleccionemos. 
 router.put('/project/:id', ProjectController.updateProject);
+//Borrar datos
+router.delete('/project/:id', ProjectController.deleteProject);
 
 module.exports = router;
